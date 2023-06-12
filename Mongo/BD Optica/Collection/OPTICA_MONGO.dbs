@@ -79,7 +79,7 @@
 		</table>
 	</schema>
 	<connector name="MongoDb" database="MongoDb" driver_class="com.wisecoders.dbschema.mongodb.JdbcDriver" driver_jar="mongojdbc4.8.1.jar" driver_desc="No Authentication" host="localhost" port="27017" instance="optica" user="admin" useSystemProxy="false" />
-	<layout name="Main Layout" id="Layout-4be" show_relation="name" >
+	<layout name="Main Layout" id="Layout-4be" confirmed="y" show_relation="name" >
 		<entity schema="optica" name="adress" color="C7F4BE" x="352" y="480" />
 		<entity schema="optica" name="client" color="BEBEF4" x="304" y="80" />
 		<entity schema="optica" name="gafas" color="BED3F4" x="560" y="80" />
@@ -99,7 +99,7 @@
 			<entity schema="optica" name="gafas" column="ventas" />
 		</group>
 	</layout>
-	<layout name="~Layout with Sample Tools" id="Layout-2708" show_column_type="y" show_relation="name" >
+	<layout name="~Layout with Sample Tools" id="Layout-2708" confirmed="y" show_column_type="y" show_relation="name" >
 		<entity schema="optica" name="adress" color="C7F4BE" x="320" y="416" />
 		<entity schema="optica" name="client" color="BEBEF4" x="320" y="80" />
 		<entity schema="optica" name="gafas" color="BED3F4" x="624" y="80" />
@@ -134,7 +134,7 @@ db.getCollection('client').find()]]></string>
 		<browser id="Browse-2369" name="Relational Data Explorer" confirm_updates="y" >
 			<browse_table schema="optica" entity="client" x="20" y="20" width="400" height="300" record_view="y" >
 				<browse_table schema="optica" entity="adress" fk="Relationship" x="440" y="20" width="500" height="350" record_view="y" >
-					<browse_table schema="optica" entity="proveïdors" fk="Relationship" x="960" y="20" width="500" height="350" record_view="y" />
+					<browse_table schema="optica" entity="client" fk="Relationship" x="960" y="20" width="500" height="350" record_view="y" />
 				</browse_table>
 			</browse_table>
 		</browser>
@@ -159,13 +159,8 @@ db.getCollection('client').find()]]></string>
 					<column name="cp_adress" />
 					<column name="pais_adress" />
 					<column name="id_client" />
-					<query_table schema="optica" name="proveïdors" alias="proveïdors" x="480" y="48" fk="Relationship" type="Inner Join" >
+					<query_table schema="optica" name="client" alias="proveïdors" x="480" y="48" fk="Relationship" type="Inner Join" >
 						<column name="_id" />
-						<column name="id_proveidor" />
-						<column name="nom_proveidor" />
-						<column name="telf_proveidor" />
-						<column name="fax_proveidor" />
-						<column name="nif_proveidor" />
 					</query_table>
 				</query_table>
 			</query_table>
@@ -179,12 +174,12 @@ db.getCollection('client').find()]]></string>
 					<form_script type="DataSource" language="SQL" >
 						<var name="_id" type="-8" />
 						<var name="id_client" type="4" />
-						<var name="nom_client" />
-						<var name="cognom1_client" />
-						<var name="cognom2_client" />
+						<var name="nom_client" type="-1" />
+						<var name="cognom1_client" type="-1" />
+						<var name="cognom2_client" type="-1" />
 						<var name="telf_client" type="4" />
-						<var name="email_client" />
-						<var name="Data_client" />
+						<var name="email_client" type="-1" />
+						<var name="Data_client" type="-1" />
 						<var name="id_recomendado" type="-8" />
 						<script ><![CDATA[optica.client.find()]]></script>
 					</form_script>
@@ -198,12 +193,12 @@ db.getCollection('client').find()]]></string>
 					<form_script type="DataSource" language="SQL" >
 						<var name="_id" type="-8" />
 						<var name="id_client" type="4" />
-						<var name="nom_client" />
-						<var name="cognom1_client" />
-						<var name="cognom2_client" />
+						<var name="nom_client" type="-1" />
+						<var name="cognom1_client" type="-1" />
+						<var name="cognom2_client" type="-1" />
 						<var name="telf_client" type="4" />
-						<var name="email_client" />
-						<var name="Data_client" />
+						<var name="email_client" type="-1" />
+						<var name="Data_client" type="-1" />
 						<var name="id_recomendado" type="-8" />
 						<script ><![CDATA[optica.client.find()]]></script>
 					</form_script>

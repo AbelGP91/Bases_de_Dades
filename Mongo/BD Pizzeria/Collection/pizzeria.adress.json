@@ -17,8 +17,9 @@
     "$oid": "64830414281f48f19c688d1a"
   },
   "id_adress": 2,
-  "id_client": "",
-  "id_botiga": "",
+  "id_botiga": {
+    "$oid": "6486cdaf42f98ca4295d7b1d"
+  },
   "carrer_adress": "Imaginario 2",
   "num_adress": 222,
   "cp_adress": "08292",
