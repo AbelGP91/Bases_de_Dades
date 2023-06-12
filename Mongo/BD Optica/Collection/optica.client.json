@@ -27,7 +27,9 @@
     "$oid": "64805b03a8a3e6cf694f7ed3"
   },
   "id_client": 3,
-  "id_recomendado": 1,
+  "id_recomendado": {
+    "$oid": "64805b03a8a3e6cf694f7ed1"
+  },
   "nom_client": "Juan",
   "cognom1_client": "Polla",
   "cognom2_client": "Limpia",
